@@ -15,10 +15,18 @@
 // printf("[%-15s][%010.2f]" . PHP_EOL , $name, $score);
 // echo $info . PHP_EOL;
 
-$input = ' dot_taguchi  ';
-$input = trim($input);
-echo strlen($input) . PHP_EOL;
-echo strpos($input, '_') . PHP_EOL;
+// $input = ' dot_taguchi  ';
+// $input = trim($input);
+// echo strlen($input) . PHP_EOL;
+// echo strpos($input, '_') . PHP_EOL;
 
-$input = str_replace('_', '-', $input);
+// $input = str_replace('_', '-', $input);
+// echo $input . PHP_EOL;
+
+$input = ' こんにちは  ';
+$input = trim($input);
+echo mb_strlen($input) . PHP_EOL;
+echo mb_strpos($input, 'に') . PHP_EOL;
+
+$input = str_replace('にち', 'ばん', $input);
 echo $input . PHP_EOL;
