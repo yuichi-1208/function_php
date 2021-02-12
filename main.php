@@ -45,13 +45,22 @@
 // echo number_format($amount) . PHP_EOL;
 
 
-$input = 'Call us at 03-3001-1256 or 03-3015-3222';
-$pattern = '/\d{2}-\d{4}-\d{4}/';
+// $input = 'Call us at 03-3001-1256 or 03-3015-3222';
+// $pattern = '/\d{2}-\d{4}-\d{4}/';
 
-preg_match($pattern, $input, $matches);
-print_r($matches);
-preg_match_all($pattern, $input, $matches);
-print_r($matches);
+// preg_match($pattern, $input, $matches);
+// print_r($matches);
+// preg_match_all($pattern, $input, $matches);
+// print_r($matches);
 
-$input = preg_replace($pattern, '**-****-****', $input);
-echo $input . PHP_EOL;
+// $input = preg_replace($pattern, '**-****-****', $input);
+// echo $input . PHP_EOL;
+
+
+$d = [2020, 11, 15];
+echo "$d[0]-$d[1]-$d[2]" . PHP_EOL;
+echo implode('-', $d) . PHP_EOL;
+
+$t = '23:30:22';
+print_r(explode(':', $t));
+
