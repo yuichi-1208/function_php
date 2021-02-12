@@ -82,16 +82,27 @@
 
 
 
-$scores = [30, 40, 50];
+// $scores = [30, 40, 50];
 
 // array_unshift($scores, 10, 20);
 // array_push($scores, 60, 70);
 // $scores[] = 80;
 
-array_shift($scores);
-array_pop($scores);
+// array_shift($scores);
+// array_pop($scores);
+
+// print_r($scores);
+
+
+
+$scores = [30, 40, 50, 60, 70];
+// $partial = array_slice($scores, 2, 3);
+// $partial = array_slice($scores, 2);
+$partial = array_slice($scores, -2);
 
 print_r($scores);
+print_r($partial);
+
 
 
 
