@@ -65,20 +65,34 @@
 // print_r(explode(':', $t));
 
 
-$n = 5.6283;
+// $n = 5.6283;
 
-echo ceil($n) . PHP_EOL;
-echo floor($n) . PHP_EOL;
-echo round($n) . PHP_EOL;
-echo round($n, 2) . PHP_EOL;
+// echo ceil($n) . PHP_EOL;
+// echo floor($n) . PHP_EOL;
+// echo round($n) . PHP_EOL;
+// echo round($n, 2) . PHP_EOL;
 
-echo mt_rand(0, 6) . PHP_EOL;
+// echo mt_rand(0, 6) . PHP_EOL;
 
-echo max(3, 9, 4) . PHP_EOL;
-echo min(3, 9, 4) . PHP_EOL;
+// echo max(3, 9, 4) . PHP_EOL;
+// echo min(3, 9, 4) . PHP_EOL;
 
-echo M_PI . PHP_EOL;
-echo M_SQRT2 . PHP_EOL;
+// echo M_PI . PHP_EOL;
+// echo M_SQRT2 . PHP_EOL;
+
+
+
+$scores = [30, 40, 50];
+
+// array_unshift($scores, 10, 20);
+// array_push($scores, 60, 70);
+// $scores[] = 80;
+
+array_shift($scores);
+array_pop($scores);
+
+print_r($scores);
+
 
 
 
