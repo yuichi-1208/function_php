@@ -165,12 +165,31 @@
 
 
 
-$prices = [100, 200, 300];
+// $prices = [100, 200, 300];
 
-$newPrices = array_map(
-  function ($n) { return $n * 1.1; },
-  // fn($n) => $n * 1.1,
-  $prices
+// $newPrices = array_map(
+//   function ($n) { return $n * 1.1; },
+//   // fn($n) => $n * 1.1,
+//   $prices
+// );
+
+// print_r($newPrices);
+
+
+
+$numbers = range(1, 10);
+
+$evenNumbers = array_filter(
+  $numbers,
+  function ($fn) {
+    // if ($fn % 2 === 0) {
+    //   return true;
+    // } else {
+    //   return false;
+    // }
+    return $fn % 2 === 0;
+  }
+  // fn($n) => $n % 2 === 0;
 );
 
-print_r($newPrices);
+print_r($evenNumbers);
