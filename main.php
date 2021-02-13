@@ -248,14 +248,29 @@ $data = [
   ['name' => 'tamachi', 'score' => 60],
 ];
 
-usort(
+// usort(
+//   $data,
+//   function ($a, $b) {
+//     if ($a['score'] === $b['score']) {
+//       return 0;
+//     }
+//     return $a['score'] > $b['score'] ? 1 : -1;
+//   }
+// );
+
+// print_r($data);
+
+$scores = array_column($data, 'score');
+$names = array_column($data, 'name');
+
+print_r($scores);
+print_r($names);
+
+array_multisort(
+  $scores, SORT_DESC, SORT_NUMERIC,
+  $names, SORT_DESC, SORT_STRING,
   $data,
-  function ($a, $b) {
-    if ($a['score'] === $b['score']) {
-      return 0;
-    }
-    return $a['score'] > $b['score'] ? 1 : -1;
-  }
 );
 
 print_r($data);
+
