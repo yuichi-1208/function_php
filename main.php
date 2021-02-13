@@ -312,18 +312,37 @@
 
 
 
-file_put_contents('data/taro.txt', "taro\n");
-file_put_contents('data/jiro.txt', "jiro\n");
+// file_put_contents('data/taro.txt', "taro\n");
+// file_put_contents('data/jiro.txt', "jiro\n");
 
-$dp = opendir('data');
-while (($item = readdir($dp)) !== false) {
-  if ($item === '.' || $item === '..') {
-    continue;
-  }
-  echo $item . PHP_EOL;
+// $dp = opendir('data');
+// while (($item = readdir($dp)) !== false) {
+//   if ($item === '.' || $item === '..') {
+//     continue;
+//   }
+//   echo $item . PHP_EOL;
+// }
+
+// foreach (glob('data/*.txt') as $item) {
+//   // echo $item . PHP_EOL;
+//   echo basename($item) . PHP_EOL;
+// }
+
+
+// if (file_exists('data/saburo.txt') === false)
+if (!file_exists('data/saburo.txt')) {
+  echo 'Saburo not here!' . PHP_EOL;
+  exit;
 }
 
-foreach (glob('data/*.txt') as $item) {
-  // echo $item . PHP_EOL;
-  echo basename($item) . PHP_EOL;
+if (file_exists('data') === true) {
+  echo 'data exits!' . PHP_EOL;
+}
+
+if (is_writable('data/taro.txt') === true) {
+  echo 'taro is writable' . PHP_EOL;
+}
+
+if (is_readable('data/taro.txt') === true) {
+  echo 'taro is readable' . PHP_EOL;
 }
