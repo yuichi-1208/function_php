@@ -143,22 +143,34 @@
 
 
 
-$a = [3, 4, 8];
-$b = [4, 8, 12];
+// $a = [3, 4, 8];
+// $b = [4, 8, 12];
 
-$merged = array_merge($a, $b);
-// $merged = [...$a, ...$b];
-print_r($merged);
+// $merged = array_merge($a, $b);
+// // $merged = [...$a, ...$b];
+// print_r($merged);
 
-$uniques = array_unique($merged);
-print_r($uniques);
+// $uniques = array_unique($merged);
+// print_r($uniques);
 
-$diff1 = array_diff($a, $b);
-print_r($diff1);
+// $diff1 = array_diff($a, $b);
+// print_r($diff1);
 
-$diff2 = array_diff($b, $a);
-print_r($diff2);
+// $diff2 = array_diff($b, $a);
+// print_r($diff2);
 
-$common = array_intersect($a, $b);
-print_r($common);
+// $common = array_intersect($a, $b);
+// print_r($common);
 
+
+
+
+$prices = [100, 200, 300];
+
+$newPrices = array_map(
+  function ($n) { return $n * 1.1; },
+  // fn($n) => $n * 1.1,
+  $prices
+);
+
+print_r($newPrices);
