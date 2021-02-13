@@ -218,23 +218,44 @@
 
 
 
-$scores = [
-  'taguchi' => 80,
-  'hayashi' => 70,
-  'kikuchi' => 60,
+// $scores = [
+//   'taguchi' => 80,
+//   'hayashi' => 70,
+//   'kikuchi' => 60,
+// ];
+
+// // sort($scores);
+// // print_r($scores);
+// // rsort($scores);
+// // print_r($scores);
+
+// // asort($scores);
+// // print_r($scores);
+// // arsort($scores);
+// // print_r($scores);
+
+// ksort($scores);
+// print_r($scores);
+// krsort($scores);
+// print_r($scores);
+
+
+
+$data = [
+  ['name' => 'taguchi', 'score' => 80],
+  ['name' => 'kikuchi', 'score' => 60],
+  ['name' => 'hayashi', 'score' => 70],
+  ['name' => 'tamachi', 'score' => 60],
 ];
 
-// sort($scores);
-// print_r($scores);
-// rsort($scores);
-// print_r($scores);
+usort(
+  $data,
+  function ($a, $b) {
+    if ($a['score'] === $b['score']) {
+      return 0;
+    }
+    return $a['score'] > $b['score'] ? 1 : -1;
+  }
+);
 
-// asort($scores);
-// print_r($scores);
-// arsort($scores);
-// print_r($scores);
-
-ksort($scores);
-print_r($scores);
-krsort($scores);
-print_r($scores);
+print_r($data);
