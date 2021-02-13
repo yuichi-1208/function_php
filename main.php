@@ -196,22 +196,45 @@
 
 
 
+// $scores = [
+//   'taguchi' => 80,
+//   'hayashi' => 70,
+//   'kikuchi' => 60,
+// ];
+
+// $keys = array_keys($scores);
+// print_r($keys);
+// $values = array_values($scores);
+// print_r($values);
+
+// if (array_key_exists('taguchi', $scores) === true) {
+  //   echo 'true' . PHP_EOL;
+  // }
+  // if (in_array(80, $scores) === true) {
+    //   echo '80 is here!' . PHP_EOL;
+    // }
+
+    // echo array_search(70, $scores) . PHP_EOL;
+
+
+
 $scores = [
   'taguchi' => 80,
   'hayashi' => 70,
   'kikuchi' => 60,
 ];
 
-$keys = array_keys($scores);
-print_r($keys);
-$values = array_values($scores);
-print_r($values);
+// sort($scores);
+// print_r($scores);
+// rsort($scores);
+// print_r($scores);
 
-if (array_key_exists('taguchi', $scores) === true) {
-  echo 'true' . PHP_EOL;
-}
-if (in_array(80, $scores) === true) {
-  echo '80 is here!' . PHP_EOL;
-}
+// asort($scores);
+// print_r($scores);
+// arsort($scores);
+// print_r($scores);
 
-echo array_search(70, $scores) . PHP_EOL;
+ksort($scores);
+print_r($scores);
+krsort($scores);
+print_r($scores);
