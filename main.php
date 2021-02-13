@@ -276,6 +276,13 @@
 
 
 
-$fp = fopen('names.txt', 'w');
-fwrite($fp, "taro\n");
+// $fp = fopen('names.txt', 'w');
+// fwrite($fp, "taro\n");
+// fclose($fp);
+
+
+
+$fp = fopen('names.txt', 'a');
+fwrite($fp, "firo\n");
+fwrite($fp, "saburo\n");
 fclose($fp);
