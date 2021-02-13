@@ -115,16 +115,50 @@
 
 
 
-$scores = [40, 50, 20, 30];
+// $scores = [40, 50, 20, 30];
 
-sort($scores);
-print_r($scores);
+// sort($scores);
+// print_r($scores);
 
-shuffle($scores);
-print_r($scores);
+// shuffle($scores);
+// print_r($scores);
 
-$picked = array_rand($scores, 2);
-echo $scores[$picked[0]] .  PHP_EOL;
-echo $scores[$picked[1]] .  PHP_EOL;
+// $picked = array_rand($scores, 2);
+// echo $scores[$picked[0]] .  PHP_EOL;
+// echo $scores[$picked[1]] .  PHP_EOL;
 
+
+
+// $scores = array_fill(0, 5, 10);
+// $scores = range(1, 10);
+// $scores = range(1, 10, 3);
+
+// print_r($scores);
+
+// echo array_sum($scores) . PHP_EOL;
+// echo max($scores) . PHP_EOL;
+// echo min($scores) . PHP_EOL;
+// echo array_sum($scores) / count($scores) . PHP_EOL;
+
+
+
+
+$a = [3, 4, 8];
+$b = [4, 8, 12];
+
+$merged = array_merge($a, $b);
+// $merged = [...$a, ...$b];
+print_r($merged);
+
+$uniques = array_unique($merged);
+print_r($uniques);
+
+$diff1 = array_diff($a, $b);
+print_r($diff1);
+
+$diff2 = array_diff($b, $a);
+print_r($diff2);
+
+$common = array_intersect($a, $b);
+print_r($common);
 
