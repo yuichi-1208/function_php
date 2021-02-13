@@ -330,19 +330,32 @@
 
 
 // if (file_exists('data/saburo.txt') === false)
-if (!file_exists('data/saburo.txt')) {
-  echo 'Saburo not here!' . PHP_EOL;
-  exit;
-}
+// if (!file_exists('data/saburo.txt')) {
+//   echo 'Saburo not here!' . PHP_EOL;
+//   exit;
+// }
 
-if (file_exists('data') === true) {
-  echo 'data exits!' . PHP_EOL;
-}
+// if (file_exists('data') === true) {
+//   echo 'data exits!' . PHP_EOL;
+// }
 
-if (is_writable('data/taro.txt') === true) {
-  echo 'taro is writable' . PHP_EOL;
-}
+// if (is_writable('data/taro.txt') === true) {
+//   echo 'taro is writable' . PHP_EOL;
+// }
 
-if (is_readable('data/taro.txt') === true) {
-  echo 'taro is readable' . PHP_EOL;
-}
+// if (is_readable('data/taro.txt') === true) {
+//   echo 'taro is readable' . PHP_EOL;
+// }
+
+
+
+
+echo time() . PHP_EOL;
+
+// echo date('Y-m-d l', time()) . PHP_EOL;
+echo date('Y-m-d l') . PHP_EOL;
+
+echo date('Y-m-d l', mktime(0, 0, 0, 5, 1, 2021)) . PHP_EOL;
+
+echo date('Y-m-d l', strtotime('2021-07-03')) . PHP_EOL;
+echo date('Y-m-d l', strtotime('2021-07-03 +7 day')) . PHP_EOL;
