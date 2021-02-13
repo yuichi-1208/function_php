@@ -282,7 +282,19 @@
 
 
 
-$fp = fopen('names.txt', 'a');
-fwrite($fp, "firo\n");
-fwrite($fp, "saburo\n");
+// $fp = fopen('names.txt', 'a');
+// fwrite($fp, "firo\n");
+// fwrite($fp, "saburo\n");
+// fclose($fp);
+
+
+$fp = fopen('names.txt', 'r');
+$contents = fread($fp, filesize('names.txt'));
+fclose($fp);
+echo $contents;
+
+$fp = fopen('names.txt', 'r');
+while (($line = fgets($fp)) !== false) {
+  echo $line;
+}
 fclose($fp);
